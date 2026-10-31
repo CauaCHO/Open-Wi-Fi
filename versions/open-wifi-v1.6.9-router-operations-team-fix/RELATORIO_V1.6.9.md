@@ -16,7 +16,8 @@
 
 - Sintaxe do Worker, scripts embutidos do painel e portal, 118 verificações locais de contrato, 14 migrações em SQLite e `wrangler deploy --dry-run`.
 - Foram testados o isolamento de uma conta restrita, o teto de velocidade por RB e a criação de conta com 100.000 iterações.
-- Pendentes: publicação no Cloudflare, migração remota, criação de uma conta real no painel e teste físico do preset na RB.
+- Produção verificada em 31/10/2026: migração `0014` registrada no D1, Worker v1.6.9 publicado, `/health` com Mercado Pago e webhook configurados, painel e portal HTTP 200, API de roteadores sem login HTTP 401 e os 21 bindings preservados. A “MicroTik Again” estava habilitada, online e com contato recente após o deploy.
+- Pendentes: criar uma conta real no painel para confirmar a correção ponta a ponta e testar fisicamente o preset de velocidade na RB.
 
 ## Roteamento de internet
 

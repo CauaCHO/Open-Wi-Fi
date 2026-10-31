@@ -10,6 +10,6 @@ Este repositório guarda as 40 versões do projeto, incluindo a v1.6.9 preparada
 - [`archives/`](archives/) contém os ZIPs originais e um [arquivo de hashes SHA-256](archives/SHA256SUMS.txt) para conferência.
 - [`docs/`](docs/) contém as propostas e documentos da pasta principal do projeto.
 
-A versão mais recente neste arquivo é a [v1.6.9](versions/open-wifi-v1.6.9-router-operations-team-fix/). As pastas de versões anteriores são registros históricos e podem exigir configuração ou migrações diferentes para execução. A v1.6.8 está publicada; a v1.6.9 foi validada localmente e ainda requer aplicação da migração `0014` e publicação do Worker.
+A versão mais recente neste arquivo é a [v1.6.9](versions/open-wifi-v1.6.9-router-operations-team-fix/). As pastas de versões anteriores são registros históricos e podem exigir configuração ou migrações diferentes para execução. A v1.6.9 está publicada; a migração `0014` foi aplicada no Cloudflare D1.
 
 Credenciais locais, arquivos `.env` reais e contas de serviço não fazem parte deste repositório. Configure segredos pelo ambiente de implantação; os arquivos `.env.example` nos pacotes servem apenas de modelo.
