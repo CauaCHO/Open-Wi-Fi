@@ -1,0 +1,2 @@
+Substitua o arquivo newlogo.png da RAIZ pela sua logo real.
+Depois rode npm start ou npm run assets:sync para copiar a imagem ao portal e ao painel Firebase.

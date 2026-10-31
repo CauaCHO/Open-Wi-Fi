@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Open Wi‑Fi</title>
+  <link rel="icon" type="image/png" href="newlogo.png" />
+  <link rel="apple-touch-icon" href="newlogo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <main class="shell">
+    <section class="hero card">
+      <div class="brand" aria-label="Open Wi-Fi">
+        <img class="brand-logo" src="newlogo.png" alt="Open Wi‑Fi" />
+        <div><strong>Open Wi‑Fi</strong><span id="brandSubtitle">Internet rápida, pagamento no PIX.</span></div>
+      </div>
+
+      <div class="hero-copy">
+        <span class="eyebrow" id="modeEyebrow">CONECTADO AO PORTAL</span>
+        <h1 id="homeTitle">Escolha seu acesso</h1>
+        <p id="homeLead">Selecione um plano, pague via PIX e o acesso é liberado para este dispositivo.</p>
+      </div>
+
+      <div id="partyEventCard" class="party-event hidden">
+        <div><span>PARTY MODE</span><strong id="partyEventName">Evento</strong></div>
+        <div class="party-until"><span>acesso night/combos até</span><strong id="partyEventEnd">—</strong></div>
+      </div>
+
+      <label class="field-label" for="payerEmail">Seu e-mail</label>
+      <input class="text-input" id="payerEmail" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" />
+      <small class="field-help">Usamos o e-mail para identificar a cobrança PIX.</small>
+
+      <div id="whatsappBox" class="whatsapp-box hidden">
+        <label class="field-label" for="payerWhatsapp">WhatsApp <span class="required-tag">obrigatório</span></label>
+        <input class="text-input" id="payerWhatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(17) 99999-9999" />
+        <small class="field-help">No Party Mode, o WhatsApp é obrigatório antes de gerar o PIX. Nos combos, o código de convite também fica vinculado a este número.</small>
+      </div>
+
+      <div class="plans" id="plans"><div class="plans-loading">Carregando planos…</div></div>
+
+      <p class="form-error hidden" id="homeError"></p>
+
+      <div id="partyJoinBox" class="party-join hidden">
+        <div><strong>Já recebeu um convite?</strong><span>Entre no combo de um amigo sem fazer outro PIX.</span></div>
+        <div class="party-actions single-action">
+          <button id="enterComboPage" class="secondary">Digitar código do convite</button>
+        </div>
+      </div>
+
+      <div class="notice"><strong>30 segundos por tentativa</strong><span>Se o tempo acabar, só a internet temporária é cortada. O QR PIX continua válido até o vencimento da cobrança.</span></div>
+    </section>
+    <footer>Open Wi‑Fi • acesso vinculado ao Device ID e aos MACs do aparelho</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

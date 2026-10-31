@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Open Wi-Fi • Monitoramento</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <section id="loginView" class="auth-shell">
+    <div class="login-card card">
+      <div class="brand centered">
+        <div class="brand-mark">⌁</div>
+        <div><strong>Open Wi‑Fi</strong><span>Central de monitoramento</span></div>
+      </div>
+      <div class="login-copy">
+        <span class="eyebrow">ACESSO ADMINISTRATIVO</span>
+        <h1>Seu Wi‑Fi, de qualquer lugar.</h1>
+        <p>Acompanhe conexões, pagamentos e resultado do Open Wi‑Fi em tempo real.</p>
+      </div>
+      <button id="googleLogin" class="primary">Entrar com Google</button>
+      <div id="loginError" class="error"></div>
+      <div class="secure-note"><strong>Painel protegido</strong><span>Somente contas Google autorizadas com a permissão Open Wi‑Fi Admin conseguem ler os dados.</span></div>
+    </div>
+  </section>
+
+  <div id="appView" class="hidden">
+    <header class="admin-header">
+      <div class="header-inner">
+        <div class="brand"><span class="brand-mark small">⌁</span><div><strong>Open Wi‑Fi</strong><span>Monitoramento</span></div></div>
+        <div class="header-actions">
+          <span id="agentStatus" class="status-chip">Agente…</span>
+          <span id="routerStatus" class="status-chip">RB…</span>
+          <span id="userLabel" class="user-label"></span>
+          <button id="logoutBtn" class="ghost">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="hero card">
+        <div>
+          <span class="eyebrow">OPEN WI‑FI • AO VIVO</span>
+          <h1>Visão geral</h1>
+          <p id="updatedAt" class="muted">Aguardando sincronização…</p>
+        </div>
+        <div id="permissionHelp" class="permission-help hidden"></div>
+      </section>
+
+      <section id="metrics" class="metrics-grid"></section>
+
+      <section class="panel card">
+        <div class="panel-head">
+          <div><span class="eyebrow">REDE</span><h2>Dispositivos</h2><p class="muted">Um aparelho pode possuir mais de um MAC vinculado ao mesmo Device ID.</p></div>
+          <input id="clientSearch" class="search" placeholder="Buscar aparelho, MAC, IP ou e-mail">
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Status</th><th>Aparelho</th><th>Rede / identificação</th><th>E-mail</th><th>Plano</th><th>Validade</th></tr></thead><tbody id="clientsBody"><tr><td colspan="6" class="empty">Carregando…</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-head"><div><span class="eyebrow">FINANCEIRO</span><h2>Últimas compras</h2><p class="muted">Pagamentos aprovados sincronizados pelo agente local.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Data</th><th>Aparelho</th><th>E-mail</th><th>Plano</th><th>Valor</th><th>Acesso até</th></tr></thead><tbody id="purchasesBody"><tr><td colspan="6" class="empty">Carregando…</td></tr></tbody></table></div>
+      </section>
+
+      <footer>Open Wi‑Fi • monitoramento remoto via Firebase</footer>
+    </main>
+  </div>
+  <script type="module" src="./dashboard.js"></script>
+</body>
+</html>

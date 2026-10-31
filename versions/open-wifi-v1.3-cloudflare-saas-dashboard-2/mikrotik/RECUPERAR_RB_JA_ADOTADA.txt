@@ -1,0 +1,9 @@
+OPEN WI-FI v1.3 — REPARAR RB JÁ ADOTADA
+
+Preferência: use no painel
+Routerboards → abrir a RB → Copiar script de reparo.
+
+O script gerado no navegador lê `openwifi-router.token` localmente na própria RB e baixa `/api/router/installer.rsc` usando a credencial individual existente.
+
+Não gere novo enrollment apenas para reparar uma RB já vinculada.
+Não abra nem compartilhe o conteúdo de `openwifi-router.token`.

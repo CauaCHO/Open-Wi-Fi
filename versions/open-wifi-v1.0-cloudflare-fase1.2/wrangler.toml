@@ -1,0 +1,24 @@
+name = "openwifi-api"
+main = "src/index.js"
+compatibility_date = "2026-08-19"
+
+[vars]
+OPENWIFI_SITE_ID = "openwifi-main"
+
+# O Worker grava heartbeat no D1 a cada ~30 s.
+# A RB continua consultando a cada 10 s para liberar/revogar rápido.
+ROUTER_HEARTBEAT_MS = "30000"
+ROUTER_OFFLINE_AFTER_MS = "90000"
+
+# Mesmo estando presente no snapshot, só atualizamos last_seen_at de um host
+# após 30 min se IP/hostname não mudou. Isso economiza D1 writes.
+ROUTER_HOST_TOUCH_MS = "1800000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "openwifi-db"
+database_id = "7575e435-705a-44d6-b1d1-90ae066d76c3"
+migrations_dir = "migrations"
+
+[observability.logs]
+enabled = true

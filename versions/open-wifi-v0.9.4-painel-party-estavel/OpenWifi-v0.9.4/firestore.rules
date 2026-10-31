@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOpenWifiAdmin() {
+      return request.auth != null && request.auth.token.openwifiAdmin == true;
+    }
+
+    match /openwifi_sites/{siteId} {
+      allow read: if isOpenWifiAdmin();
+      allow write: if false;
+
+      match /control/desired {
+        allow read, write: if isOpenWifiAdmin();
+      }
+      match /control/status {
+        allow read: if isOpenWifiAdmin();
+        allow write: if false;
+      }
+
+      match /{document=**} {
+        allow read: if isOpenWifiAdmin();
+        allow write: if false;
+      }
+    }
+
+    // Acompanhamento público do grupo: somente quem possui o token aleatório
+    // completo consegue ler o documento. Listar/pesquisar a coleção é proibido.
+    match /openwifi_group_public/{groupToken} {
+      allow get: if true;
+      allow list: if false;
+      allow create, update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

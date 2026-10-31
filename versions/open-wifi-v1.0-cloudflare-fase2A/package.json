@@ -1,0 +1,17 @@
+{
+  "name": "openwifi-cloudflare-v1",
+  "version": "1.0.0-phase2a",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "db:check": "wrangler d1 execute DB --remote --command=\"PRAGMA table_list;\"",
+    "payments:check": "wrangler d1 execute DB --remote --command=\"SELECT id,mp_order_id,status,amount_cents,created_at,approved_at FROM payments ORDER BY created_at DESC LIMIT 10;\"",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
+  }
+}

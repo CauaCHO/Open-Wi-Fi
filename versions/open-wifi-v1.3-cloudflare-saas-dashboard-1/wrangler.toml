@@ -1,0 +1,35 @@
+name = "openwifi-api"
+main = "src/index.js"
+compatibility_date = "2026-08-20"
+
+[vars]
+OPENWIFI_SITE_ID = "openwifi-main"
+OPENWIFI_BASE_URL = "https://openwifi-api.cauaholiveira06.workers.dev"
+
+ROUTER_HEARTBEAT_MS = "30000"
+ROUTER_OFFLINE_AFTER_MS = "90000"
+ROUTER_HOST_TOUCH_MS = "1800000"
+
+MP_PIX_EXPIRATION = "PT30M"
+MP_FALLBACK_SYNC_MS = "20000"
+
+ATTEMPT_WINDOW_MS = "30000"
+ATTEMPT_ROUTER_WAIT_MS = "60000"
+MAX_ATTEMPTS = "3"
+COOLDOWN_MS = "600000"
+
+ADMIN_USER = "admin"
+ADMIN_SESSION_HOURS = "12"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "openwifi-db"
+database_id = "7575e435-705a-44d6-b1d1-90ae066d76c3"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "openwifi-media"
+
+[observability.logs]
+enabled = true

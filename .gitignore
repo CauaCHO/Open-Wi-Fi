@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.env
+.env.*
+!.env.example
+secrets/*
+!secrets/.gitkeep
+**/secrets/*
+!**/secrets/.gitkeep
+*.log

@@ -1,0 +1,28 @@
+OPEN WI-FI v1.3 — MIKROTIK
+
+O procedimento normal para uma nova RB é:
+
+Painel
+→ selecionar o estabelecimento
+→ MikroTik / Instalação
+→ Adicionar MikroTik
+→ escolher o modo
+→ Gerar script
+→ executar o bootstrap como um único bloco/script RouterOS
+
+A RB recebe uma credencial individual e fica vinculada automaticamente ao estabelecimento selecionado.
+
+O instalador v1.3 faz atualização segura do agente:
+
+openwifi-cloud-poll-new
+→ smoke test
+→ backup do agente anterior
+→ promoção
+→ scheduler 10 s
+→ status installed/complete
+
+O arquivo `openwifi-cloud-agent-v1.3-reference.rsc` é apenas referência técnica.
+Não é necessário inserir token manualmente nele.
+
+Para a primeira instalação completa em uma RB nova, use o roteiro em:
+TESTES_V1.3_SAAS.md

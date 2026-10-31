@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Pagamento • Open Wi‑Fi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="pay">
+  <main class="shell compact">
+    <section class="card payment-card">
+      <a class="back" href="index.html">← Alterar plano</a>
+      <div class="brand centered"><div class="brand-mark">⌁</div><div><strong>Open Wi‑Fi</strong><span>Pagamento via PIX</span></div></div>
+
+      <div id="loadingPayment" class="loading-state">
+        <div class="spinner"></div>
+        <strong>Gerando seu PIX...</strong>
+        <span>A cobrança está sendo criada.</span>
+      </div>
+
+      <div id="paymentContent" class="hidden">
+        <div class="payment-summary"><span id="paymentPlan">Plano</span><strong id="paymentPrice">R$ 0</strong></div>
+        <div id="sandboxNotice" class="status-box hidden"><strong>Modo sandbox</strong><span>O Mercado Pago usa uma cobrança fictícia de R$ 50,00 para simular aprovação. O plano escolhido continua valendo apenas no Open Wi‑Fi.</span></div>
+        <div class="timer-wrap" aria-live="polite"><div class="timer" id="timer">00:30</div><span>para concluir esta tentativa</span></div>
+
+        <div class="qr-placeholder" id="qrPlaceholder">
+          <img id="qrImage" class="qr-image hidden" alt="QR Code PIX" />
+          <div id="mockQr" class="mock-qr hidden"><strong>PIX TESTE</strong><span>Modo sem cobrança real</span></div>
+        </div>
+
+        <button class="primary" id="copyPix">Copiar PIX Copia e Cola</button>
+        <a class="secondary link-button hidden" id="ticketUrl" target="_blank" rel="noopener">Abrir instruções do PIX</a>
+        <button class="secondary hidden" id="simulatePaid">Simular pagamento aprovado</button>
+
+        <div class="attempts"><span>Tentativa</span><strong id="attemptCounter">1 de 3</strong></div>
+        <p class="payment-status" id="paymentStatus">Aguardando pagamento...</p>
+
+        <div class="status-box hidden" id="expiredBox">
+          <strong>Os 30 segundos terminaram.</strong>
+          <span id="expiredText">Esta tentativa foi encerrada.</span>
+          <button class="primary" id="retryPayment">Gerar nova tentativa</button>
+        </div>
+      </div>
+
+      <div class="status-box error-box hidden" id="paymentError">
+        <strong>Não foi possível gerar o PIX.</strong>
+        <span id="paymentErrorText">Tente novamente.</span>
+        <a class="primary link-button" href="index.html">Voltar</a>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

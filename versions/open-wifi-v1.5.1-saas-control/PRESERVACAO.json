@@ -1,0 +1,29 @@
+{
+  "baseline": "open-wifi-v1.5-command-center-upgrade.zip",
+  "baselineSha256": "5b45aed43c3a43ffb1025e4f3611854a8d45775975f8d666c47989715c733842",
+  "workerComparedWithNormalizedLineEndings": true,
+  "changedFunctions": [
+    "adminRouters",
+    "adminPlatform",
+    "adminPage"
+  ],
+  "otherSourceChange": "Root endpoint version text only",
+  "allOtherWorkerCodeIdentical": true,
+  "protectedFilesSha256": {
+    "migrations/0003_phase12_indexes.sql": "13c452f948a450f4377de024c54764b1976db043b71de0035974d65085102335",
+    "migrations/0004_phase2a_pix.sql": "88fcca47fa3aff988ec30e40ec65a9fdfc6c5e53e08408d9cea9af6478c7c6cc",
+    "migrations/0005_phase2b_attempts.sql": "dcad789dc2e85dcf41e3dbb769b4a3aedd4fc67ce2ca093a729bceaeb72a2a6e",
+    "migrations/0006_phase3a_admin_party.sql": "58cfad68d2bfa57e9e9e4ee1b27b424850f0116f75925739e74c9ac55c9108a9",
+    "migrations/0007_phase3a1_admin_block.sql": "946f3272041c48b0524063afe9af3b8a07aa0fbc92c3f2bb87998ed9307ff700",
+    "migrations/0008_phase3a2_ux_codes.sql": "122e0b3ec5f286cb7316b765177151bc68d95cd842040bd21dd970811fa18a8c",
+    "migrations/0009_phase3a3_temp_revoke.sql": "e074b1a5c071fdacbf9706ee3a385580b74716eb1be1151ee2fcffcf3439490f",
+    "migrations/0010_phase3a4_assets_refresh.sql": "1e63e6bbcaa0e071f1c3597dce46901b0a5d612013e401f6016e36c09c12cfd4",
+    "migrations/0011_phase3b_operational_suite.sql": "8f7ad6a998cde5b8b3eed31c466bcd329de368054620932e07b00763f37398e0",
+    "migrations/0012_phase4_router_provisioning.sql": "a087fdeb42f7b961f6f13eb5f57e83ff93661ab874efd1887ce69a8c835202ba",
+    "mikrotik/LEIA-ME_FASE4.txt": "10f7bc59b2fad79276635d12390c46ce8140b4dadff818ba23b658d3e317a3f1",
+    "mikrotik/openwifi-cloud-agent-phase4.rsc": "a1fc47996f606eacd36b42c74024ebb31724290624a34aa5e72fd72366678495",
+    "mikrotik/RECUPERAR_RB_JA_ADOTADA.txt": "0fec1df84fb5ef9e54b88f45e21933c3219dfdab1e0384cf9225a6a948f3da47",
+    "wrangler.toml": "07dd3d58af12c7d4d2500c912832aa8e5afaa0aab93759aa80d1247d66cc1387"
+  },
+  "note": "Preservation is a code comparison, not proof of physical or commercial integration tests."
+}

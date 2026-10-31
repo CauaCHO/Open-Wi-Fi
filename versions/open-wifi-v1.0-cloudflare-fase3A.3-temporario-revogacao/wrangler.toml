@@ -1,0 +1,38 @@
+name = "openwifi-api"
+main = "src/index.js"
+compatibility_date = "2026-08-19"
+
+[vars]
+OPENWIFI_SITE_ID = "openwifi-main"
+OPENWIFI_BASE_URL = "https://openwifi-api.cauaholiveira06.workers.dev"
+
+ROUTER_HEARTBEAT_MS = "30000"
+ROUTER_OFFLINE_AFTER_MS = "90000"
+ROUTER_HOST_TOUCH_MS = "1800000"
+
+# Pix via Checkout Transparente / API Orders.
+# O Mercado Pago exige no mínimo 30 minutos para expiration_time do Pix.
+MP_PIX_EXPIRATION = "PT30M"
+
+# O navegador consulta nosso D1 frequentemente.
+# Só fazemos GET na Order do Mercado Pago como fallback após este intervalo.
+MP_FALLBACK_SYNC_MS = "20000"
+
+# Regra visual/anti-abuso herdada do Open Wi-Fi.
+# O fim da janela NÃO invalida o QR Pix.
+ATTEMPT_WINDOW_MS = "30000"
+ATTEMPT_ROUTER_WAIT_MS = "60000"
+MAX_ATTEMPTS = "3"
+COOLDOWN_MS = "600000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "openwifi-db"
+database_id = "7575e435-705a-44d6-b1d1-90ae066d76c3"
+migrations_dir = "migrations"
+
+[observability.logs]
+enabled = true
+
+ADMIN_USER = "admin"
+ADMIN_SESSION_HOURS = "12"

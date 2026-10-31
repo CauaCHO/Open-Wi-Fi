@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Wi-Fi</title>
+</head>
+<body>
+  <p>Abrindo Open Wi-Fi...</p>
+  <script>
+    location.replace(
+      "https://openwifi-api.cauaholiveira06.workers.dev/portal" +
+      "?site=openwifi-main" +
+      "&mac=" + encodeURIComponent("$(mac-esc)") +
+      "&ip=" + encodeURIComponent("$(ip-esc)")
+    );
+  </script>
+</body>
+</html>

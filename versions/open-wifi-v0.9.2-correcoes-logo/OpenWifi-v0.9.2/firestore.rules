@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOpenWifiAdmin() {
+      return request.auth != null && request.auth.token.openwifiAdmin == true;
+    }
+
+    match /openwifi_sites/{siteId} {
+      allow read: if isOpenWifiAdmin();
+      allow write: if false;
+
+      // O dashboard remoto pode pedir troca de modo. O agente local valida e
+      // aplica a mudança antes de ela chegar à MikroTik.
+      match /control/desired {
+        allow read, write: if isOpenWifiAdmin();
+      }
+      match /control/status {
+        allow read: if isOpenWifiAdmin();
+        allow write: if false;
+      }
+
+      match /{document=**} {
+        allow read: if isOpenWifiAdmin();
+        allow write: if false;
+      }
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

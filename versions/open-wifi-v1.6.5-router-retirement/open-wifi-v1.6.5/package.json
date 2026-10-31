@@ -1,0 +1,38 @@
+{
+  "name": "openwifi-cloudflare-v1",
+  "version": "1.6.5",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "db:check": "wrangler d1 execute DB --remote --command=\"PRAGMA table_list;\"",
+    "payments:check": "wrangler d1 execute DB --remote --command=\"SELECT id,mp_order_id,status,amount_cents,created_at,approved_at FROM payments ORDER BY created_at DESC LIMIT 10;\"",
+    "tail": "wrangler tail",
+    "attempts:check": "wrangler d1 execute DB --remote --command=\"SELECT id,device_id,mac,attempt_number,status,router_started_at,starts_at,ends_at FROM access_attempts ORDER BY created_at DESC LIMIT 20;\"",
+    "codes:check": "wrangler d1 execute DB --remote --command=\"SELECT code,mode,status,duration_seconds,is_permanent,uses,max_uses,redeemed_at FROM access_codes ORDER BY created_at DESC LIMIT 30;\"",
+    "groups:check": "wrangler d1 execute DB --remote --command=\"SELECT id,code,max_devices,phone_e164,expires_at,created_at FROM party_groups ORDER BY created_at DESC LIMIT 20;\"",
+    "audit:check": "wrangler d1 execute DB --remote --command=\"SELECT action,created_at,details_json FROM admin_audit ORDER BY created_at DESC LIMIT 20;\"",
+    "users:check": "wrangler d1 execute DB --remote --command=\"SELECT d.id,d.hostname,d.payer_email,d.phone_e164,MAX(CASE WHEN ag.status='active' THEN ag.ends_at END) AS active_until FROM devices d LEFT JOIN access_grants ag ON ag.device_id=d.id GROUP BY d.id ORDER BY d.updated_at DESC LIMIT 50;\"",
+    "report:check": "wrangler d1 execute DB --remote --command=\"SELECT id,name,starts_at,ends_at,status FROM events ORDER BY created_at DESC LIMIT 10;\"",
+    "team:check": "wrangler d1 execute DB --remote --command=\"SELECT username,display_name,role,enabled,last_login_at FROM admin_accounts ORDER BY created_at DESC;\"",
+    "privacy:check": "wrangler d1 execute DB --remote --command=\"SELECT site_id,device_id,policy_version,accepted_at FROM privacy_acceptances ORDER BY accepted_at DESC LIMIT 20;\"",
+    "routers:check": "wrangler d1 execute DB --remote --command=\"SELECT id,name,identity,board,version,install_mode,install_status,last_seen_at FROM router_devices ORDER BY created_at DESC;\"",
+    "enrollments:check": "wrangler d1 execute DB --remote --command=\"SELECT id,router_name,install_mode,expires_at,used_at,router_id FROM router_enrollments ORDER BY created_at DESC LIMIT 30;\"",
+    "types": "wrangler types",
+    "validate:ui": "node scripts/validate-dashboard.mjs",
+    "check": "node --check src/index.js && npm run validate:ui && npm run validate:contracts && npm run validate:portal && wrangler deploy --dry-run",
+    "validate:contracts": "node scripts/validate-contracts.mjs",
+    "validate:portal": "node scripts/validate-portal-captive.mjs",
+    "validate:migrations": "python scripts/validate-migrations.py",
+    "preview:qa": "node scripts/preview-local.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "wrangler": "^4.130.0"
+  },
+  "overrides": {
+    "sharp": "0.35.4"
+  }
+}

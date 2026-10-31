@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Wi-Fi • Administração</title>
+  <link rel="icon" type="image/png" href="/newlogo.png">
+  <link rel="apple-touch-icon" href="/newlogo.png">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-auth-body">
+  <main class="login-card">
+    <img class="login-logo" src="/newlogo.png" alt="Open Wi‑Fi">
+    <h1>Open Wi-Fi</h1>
+    <p class="muted">Painel de monitoramento</p>
+    <div id="setup" class="notice hidden">Configure <code>ADMIN_USER</code> e <code>ADMIN_PASSWORD</code> no arquivo <code>.env</code> e reinicie o servidor.</div>
+    <form id="loginForm">
+      <label>Usuário<input name="username" autocomplete="username" required></label>
+      <label>Senha<input type="password" name="password" autocomplete="current-password" required></label>
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="error" class="error"></p>
+  </main>
+  <script>
+    if (new URLSearchParams(location.search).get('setup')) document.querySelector('#setup').classList.remove('hidden');
+    document.querySelector('#loginForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.currentTarget));
+      const r = await fetch('/api/admin/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});
+      const j = await r.json().catch(()=>({}));
+      if(r.ok) location.href='/admin'; else document.querySelector('#error').textContent=j.error||'Falha ao entrar';
+    });
+  </script>
+</body></html>

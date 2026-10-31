@@ -1,0 +1,16 @@
+name = "openwifi-api"
+main = "src/index.js"
+compatibility_date = "2026-08-19"
+
+[vars]
+OPENWIFI_SITE_ID = "openwifi-main"
+ROUTER_OFFLINE_AFTER_MS = "60000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "openwifi-db"
+database_id = "COLE_AQUI_O_DATABASE_ID"
+migrations_dir = "migrations"
+
+[observability.logs]
+enabled = true

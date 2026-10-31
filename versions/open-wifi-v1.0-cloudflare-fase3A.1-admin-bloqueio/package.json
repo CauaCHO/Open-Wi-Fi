@@ -1,0 +1,22 @@
+{
+  "name": "openwifi-cloudflare-v1",
+  "version": "1.0.0-phase3a.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "db:check": "wrangler d1 execute DB --remote --command=\"PRAGMA table_list;\"",
+    "payments:check": "wrangler d1 execute DB --remote --command=\"SELECT id,mp_order_id,status,amount_cents,created_at,approved_at FROM payments ORDER BY created_at DESC LIMIT 10;\"",
+    "tail": "wrangler tail",
+    "attempts:check": "wrangler d1 execute DB --remote --command=\"SELECT id,device_id,payment_id,mac,attempt_number,status,starts_at,ends_at FROM access_attempts ORDER BY created_at DESC LIMIT 15;\"",
+    "codes:check": "wrangler d1 execute DB --remote --command=\"SELECT code,mode,status,uses,max_uses,expires_at,redeemed_at FROM access_codes ORDER BY created_at DESC LIMIT 20;\"",
+    "groups:check": "wrangler d1 execute DB --remote --command=\"SELECT id,code,max_devices,phone_e164,expires_at,created_at FROM party_groups ORDER BY created_at DESC LIMIT 20;\"",
+    "audit:check": "wrangler d1 execute DB --remote --command=\"SELECT action,created_at,details_json FROM admin_audit ORDER BY created_at DESC LIMIT 20;\"",
+    "users:check": "wrangler d1 execute DB --remote --command=\"SELECT id,hostname,payer_email,phone_e164,admin_blocked,admin_block_reason,admin_blocked_at FROM devices ORDER BY updated_at DESC LIMIT 50;\""
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
+  }
+}

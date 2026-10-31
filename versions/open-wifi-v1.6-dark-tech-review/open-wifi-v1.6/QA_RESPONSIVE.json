@@ -1,0 +1,758 @@
+[
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "platform",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "platform",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "platform",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "platform",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "platform",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "platform",
+    "width": 768
+  },
+  {
+    "contentWidth": 1009,
+    "overflow": false,
+    "tab": "platform",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1425,
+    "overflow": false,
+    "tab": "platform",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1905,
+    "overflow": false,
+    "tab": "platform",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "hotspots",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "dash",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "dash",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "dash",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "dash",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "dash",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "dash",
+    "width": 768
+  },
+  {
+    "contentWidth": 1009,
+    "overflow": false,
+    "tab": "dash",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1425,
+    "overflow": false,
+    "tab": "dash",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1905,
+    "overflow": false,
+    "tab": "dash",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "routers",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "routers",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "routers",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "routers",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "routers",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "routers",
+    "width": 768
+  },
+  {
+    "contentWidth": 1009,
+    "overflow": false,
+    "tab": "routers",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1425,
+    "overflow": false,
+    "tab": "routers",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1905,
+    "overflow": false,
+    "tab": "routers",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "users",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "users",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "users",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "users",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "users",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "users",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "users",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "users",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "users",
+    "width": 1920
+  },
+  {
+    "contentWidth": 320,
+    "overflow": false,
+    "tab": "codes",
+    "width": 320
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "codes",
+    "width": 360
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "codes",
+    "width": 375
+  },
+  {
+    "contentWidth": 390,
+    "overflow": false,
+    "tab": "codes",
+    "width": 390
+  },
+  {
+    "contentWidth": 430,
+    "overflow": false,
+    "tab": "codes",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "codes",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "codes",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "codes",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "codes",
+    "width": 1920
+  },
+  {
+    "contentWidth": 320,
+    "overflow": false,
+    "tab": "groups",
+    "width": 320
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "groups",
+    "width": 360
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "groups",
+    "width": 375
+  },
+  {
+    "contentWidth": 390,
+    "overflow": false,
+    "tab": "groups",
+    "width": 390
+  },
+  {
+    "contentWidth": 430,
+    "overflow": false,
+    "tab": "groups",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "groups",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "groups",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "groups",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "groups",
+    "width": 1920
+  },
+  {
+    "contentWidth": 320,
+    "overflow": false,
+    "tab": "plans",
+    "width": 320
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "plans",
+    "width": 360
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "plans",
+    "width": 375
+  },
+  {
+    "contentWidth": 390,
+    "overflow": false,
+    "tab": "plans",
+    "width": 390
+  },
+  {
+    "contentWidth": 430,
+    "overflow": false,
+    "tab": "plans",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "plans",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "plans",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "plans",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "plans",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "reports",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "reports",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "reports",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "reports",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "reports",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "reports",
+    "width": 768
+  },
+  {
+    "contentWidth": 1009,
+    "overflow": false,
+    "tab": "reports",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1425,
+    "overflow": false,
+    "tab": "reports",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "reports",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "mode",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "mode",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "mode",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "mode",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "mode",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "mode",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "mode",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "mode",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "mode",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "diagnostics",
+    "width": 1920
+  },
+  {
+    "contentWidth": 305,
+    "overflow": false,
+    "tab": "portal",
+    "width": 320
+  },
+  {
+    "contentWidth": 345,
+    "overflow": false,
+    "tab": "portal",
+    "width": 360
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "portal",
+    "width": 375
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "portal",
+    "width": 390
+  },
+  {
+    "contentWidth": 415,
+    "overflow": false,
+    "tab": "portal",
+    "width": 430
+  },
+  {
+    "contentWidth": 753,
+    "overflow": false,
+    "tab": "portal",
+    "width": 768
+  },
+  {
+    "contentWidth": 1009,
+    "overflow": false,
+    "tab": "portal",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1425,
+    "overflow": false,
+    "tab": "portal",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1905,
+    "overflow": false,
+    "tab": "portal",
+    "width": 1920
+  },
+  {
+    "contentWidth": 320,
+    "overflow": false,
+    "tab": "team",
+    "width": 320
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "team",
+    "width": 360
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "team",
+    "width": 375
+  },
+  {
+    "contentWidth": 390,
+    "overflow": false,
+    "tab": "team",
+    "width": 390
+  },
+  {
+    "contentWidth": 430,
+    "overflow": false,
+    "tab": "team",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "team",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "team",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "team",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "team",
+    "width": 1920
+  },
+  {
+    "contentWidth": 320,
+    "overflow": false,
+    "tab": "audit",
+    "width": 320
+  },
+  {
+    "contentWidth": 360,
+    "overflow": false,
+    "tab": "audit",
+    "width": 360
+  },
+  {
+    "contentWidth": 375,
+    "overflow": false,
+    "tab": "audit",
+    "width": 375
+  },
+  {
+    "contentWidth": 390,
+    "overflow": false,
+    "tab": "audit",
+    "width": 390
+  },
+  {
+    "contentWidth": 430,
+    "overflow": false,
+    "tab": "audit",
+    "width": 430
+  },
+  {
+    "contentWidth": 768,
+    "overflow": false,
+    "tab": "audit",
+    "width": 768
+  },
+  {
+    "contentWidth": 1024,
+    "overflow": false,
+    "tab": "audit",
+    "width": 1024
+  },
+  {
+    "contentWidth": 1440,
+    "overflow": false,
+    "tab": "audit",
+    "width": 1440
+  },
+  {
+    "contentWidth": 1920,
+    "overflow": false,
+    "tab": "audit",
+    "width": 1920
+  }
+]

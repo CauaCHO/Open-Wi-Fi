@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Wi-Fi</title>
+</head>
+<body>
+  <p>Abrindo o Open Wi-Fi...</p>
+  <script>
+    // Troque IP_DO_BACKEND pelo IP do notebook/servidor Open Wi-Fi.
+    // O RouterOS substitui $(mac) e $(ip) pelos dados do cliente HotSpot.
+    location.replace('http://IP_DO_BACKEND:8080/index.html?mac=$(mac)&ip=$(ip)');
+  </script>
+</body>
+</html>

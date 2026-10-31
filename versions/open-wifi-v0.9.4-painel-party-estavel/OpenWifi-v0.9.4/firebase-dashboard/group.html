@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Grupo Party • Open Wi‑Fi</title>
+  <link rel="icon" type="image/png" href="./newlogo.png">
+  <link rel="apple-touch-icon" href="./newlogo.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="group-view-body">
+  <main class="group-view-shell">
+    <section class="card group-view-card">
+      <div class="brand centered"><img class="brand-logo" src="./newlogo.png" alt="Open Wi‑Fi"><div><strong>Open Wi‑Fi</strong><span>Party • acompanhamento do grupo</span></div></div>
+      <div id="groupLoading" class="group-loading"><span class="eyebrow">CARREGANDO</span><h1>Buscando seu grupo…</h1><p class="muted">Esta página é somente para acompanhamento.</p></div>
+      <div id="groupContent" class="hidden">
+        <span class="eyebrow">GRUPO PARTY</span>
+        <h1 id="groupLabel">Combo</h1>
+        <p id="groupEvent" class="muted">Evento</p>
+        <div class="group-code-row"><div><span>Código</span><strong id="groupCode">—</strong></div><div><span>Ocupação</span><strong><b id="groupUsed">0</b>/<b id="groupMax">0</b></strong></div></div>
+        <div id="groupStatus" class="status-chip online">Ativo</div>
+        <div class="group-members-head"><div><span class="eyebrow">APARELHOS</span><h2>Vagas vinculadas</h2></div><span id="groupUpdated" class="muted"></span></div>
+        <div id="groupMembers" class="group-members"></div>
+        <div class="secure-note group-note"><strong>Vagas permanentes durante o evento</strong><span>Depois que um aparelho ocupa uma vaga, ele não pode ser removido ou trocado. Se o mesmo aparelho aparecer com outro MAC, continua sendo a mesma vaga quando o Device ID for reconhecido.</span></div>
+      </div>
+      <div id="groupError" class="permission-help hidden"><strong>Não foi possível abrir este grupo.</strong><span id="groupErrorText">Link inválido ou grupo indisponível.</span></div>
+    </section>
+  </main>
+  <script type="module" src="./group.js"></script>
+</body>
+</html>

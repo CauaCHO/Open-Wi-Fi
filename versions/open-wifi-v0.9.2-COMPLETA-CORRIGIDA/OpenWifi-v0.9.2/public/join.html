@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Entrar no combo • Open Wi‑Fi</title>
+  <link rel="icon" type="image/png" href="newlogo.png" />
+  <link rel="apple-touch-icon" href="newlogo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="join">
+  <main class="shell compact">
+    <section class="card payment-card">
+      <a class="back" href="index.html">← Voltar</a>
+      <div class="brand centered"><img class="brand-logo" src="newlogo.png" alt="Open Wi‑Fi" /><div><strong>Open Wi‑Fi</strong><span>Convite Party</span></div></div>
+
+      <div class="hero-copy join-copy">
+        <span class="eyebrow">ENTRAR EM UM COMBO</span>
+        <h1>Seu amigo já pagou?</h1>
+        <p>Digite o código enviado pelo comprador do combo.</p>
+      </div>
+
+      <label class="field-label" for="inviteCode">Código do convite</label>
+      <input class="text-input code-input" id="inviteCode" inputmode="text" autocomplete="off" maxlength="9" placeholder="Q7K2-P9XM" />
+      <button id="lookupInvite" class="secondary">Verificar convite</button>
+
+      <div id="inviteError" class="status-box error-box hidden"><strong>Não encontramos esse convite.</strong><span id="inviteErrorText">Confira o código e tente novamente.</span></div>
+
+      <div id="inviteCard" class="invite-card hidden">
+        <span class="eyebrow">CONVITE VÁLIDO</span>
+        <h2 id="inviteLabel">Quarteto</h2>
+        <div class="invite-code" id="inviteCodeView">—</div>
+        <div class="access-info">
+          <div><span>Evento</span><strong id="inviteEvent">—</strong></div>
+          <div><span>Vagas</span><strong id="inviteSlots">—</strong></div>
+          <div><span>Validade</span><strong id="inviteUntil">—</strong></div>
+          <div><span>Status</span><strong>Ativo</strong></div>
+        </div>
+        <button id="joinCombo" class="primary">Entrar neste combo</button>
+      </div>
+
+      <div id="joinSuccess" class="status-box success-box hidden"><strong>Você entrou no combo ✓</strong><span id="joinSuccessText">Seu aparelho foi liberado.</span><button id="joinContinue" class="primary">Continuar na internet</button></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

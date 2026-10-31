@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d2821">
+  <title>Open Wi-Fi • Monitoramento</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <section id="loginView" class="auth-shell">
+    <div class="login-card">
+      <div class="brand-mark">⌁</div>
+      <h1>Open Wi-Fi</h1>
+      <p>Monitoramento remoto</p>
+      <button id="googleLogin" class="primary">Entrar com Google</button>
+      <div id="loginError" class="error"></div>
+      <div class="secure-note">O painel só lê dados depois que sua conta for autorizada nas regras do Firestore.</div>
+    </div>
+  </section>
+
+  <div id="appView" class="hidden">
+    <header class="admin-header">
+      <div class="brand"><span class="brand-mark small">⌁</span><strong>Open Wi-Fi</strong><span class="header-sub">Firebase</span></div>
+      <div class="header-actions">
+        <span id="agentStatus" class="status-chip">Agente…</span>
+        <span id="routerStatus" class="status-chip">RB…</span>
+        <span id="userLabel" class="user-label"></span>
+        <button id="logoutBtn" class="ghost">Sair</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="hero">
+        <div><h1>Visão geral</h1><p id="updatedAt" class="muted">Aguardando sincronização…</p></div>
+        <div id="permissionHelp" class="permission-help hidden"></div>
+      </section>
+      <section id="metrics" class="metrics-grid"></section>
+
+      <section class="panel">
+        <div class="panel-head"><div><h2>Dispositivos</h2><p class="muted">Estado sincronizado pelo agente local com a MikroTik.</p></div><input id="clientSearch" class="search" placeholder="Buscar aparelho, MAC, IP ou e-mail"></div>
+        <div class="table-wrap"><table><thead><tr><th>Status</th><th>Aparelho</th><th>IP / MAC</th><th>E-mail</th><th>Plano</th><th>Validade</th></tr></thead><tbody id="clientsBody"><tr><td colspan="6" class="empty">Carregando…</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><div><h2>Últimas compras</h2><p class="muted">Pagamentos aprovados sincronizados com o Firestore.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Data</th><th>Aparelho</th><th>E-mail</th><th>Plano</th><th>Valor</th><th>Acesso até</th></tr></thead><tbody id="purchasesBody"><tr><td colspan="6" class="empty">Carregando…</td></tr></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./dashboard.js"></script>
+</body>
+</html>

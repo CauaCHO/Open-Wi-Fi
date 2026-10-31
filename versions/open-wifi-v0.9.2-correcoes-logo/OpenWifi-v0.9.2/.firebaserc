@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "open-wi-fi"
+  },
+  "targets": {
+    "open-wi-fi": {
+      "hosting": {
+        "open-wi-fi-ofc": [
+          "open-wi-fi-ofc"
+        ]
+      }
+    }
+  }
+}

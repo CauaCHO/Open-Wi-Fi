@@ -1,0 +1,2 @@
+Copie sua imagem para esta pasta com o nome exato: newlogo.png
+Depois execute npm start (ou npm run assets:sync).

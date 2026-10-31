@@ -1,0 +1,17 @@
+{
+  "name": "openwifi-cloudflare-v1",
+  "version": "1.0.0-phase1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:remote": "wrangler d1 migrations apply openwifi-db --remote",
+    "db:migrate:local": "wrangler d1 migrations apply openwifi-db --local",
+    "db:check": "wrangler d1 execute openwifi-db --remote --command=\"SELECT name FROM sqlite_schema WHERE type='table' ORDER BY name;\"",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

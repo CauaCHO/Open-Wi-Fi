@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="cache-control" content="no-store">
+  <title>Open Wi-Fi</title>
+</head>
+<body>
+  <p>Abrindo Open Wi-Fi...</p>
+  <script>
+    location.replace(
+      "https://openwifi-api.cauaholiveira06.workers.dev/portal" +
+      "?site=openwifi-main" +
+      "&mac=" + encodeURIComponent("$(mac-esc)") +
+      "&ip=" + encodeURIComponent("$(ip-esc)")
+    );
+  </script>
+  <noscript>Ative o JavaScript para acessar o Open Wi-Fi.</noscript>
+</body>
+</html>

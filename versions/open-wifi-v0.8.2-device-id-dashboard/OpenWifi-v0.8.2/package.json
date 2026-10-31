@@ -1,0 +1,22 @@
+{
+  "name": "open-wifi-mercadopago",
+  "version": "0.8.2",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "check": "node --check server.mjs && node --check src/store.mjs && node --check src/mercadopago.mjs && node --check src/routeros-api.mjs && node --check src/mikrotik.mjs && node --check src/payments.mjs && node --check src/admin.mjs && node --check src/firebase-sync.mjs && node --check scripts/grant-firebase-admin.mjs && node --check scripts/firebase-check.mjs && node --check public/app.js && node --check public/admin.js && node --check firebase-dashboard/dashboard.js",
+    "firebase:check": "node scripts/firebase-check.mjs",
+    "firebase:grant-admin": "node scripts/grant-firebase-admin.mjs"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "mercadopago": "^3.0.0",
+    "qrcode": "^1.5.4",
+    "firebase-admin": "13.10.0"
+  }
+}

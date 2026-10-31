@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Pagamento • Open Wi‑Fi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="pay">
+  <main class="shell compact">
+    <section class="card payment-card">
+      <a class="back" href="index.html">← Alterar plano</a>
+      <div class="brand centered"><div class="brand-mark">⌁</div><div><strong>Open Wi‑Fi</strong><span>Pagamento via PIX</span></div></div>
+
+      <div id="loadingPayment" class="loading-state">
+        <div class="spinner"></div>
+        <strong>Gerando seu PIX...</strong>
+        <span>A cobrança está sendo criada.</span>
+      </div>
+
+      <div id="paymentContent" class="hidden">
+        <div class="payment-summary"><span id="paymentPlan">Plano</span><strong id="paymentPrice">R$ 0</strong></div>
+        <div id="sandboxNotice" class="status-box hidden"><strong>Modo sandbox</strong><span>O Mercado Pago usa uma cobrança fictícia de R$ 50,00 para simular aprovação. O plano escolhido continua valendo apenas no Open Wi‑Fi.</span></div>
+        <div class="timer-wrap" aria-live="polite"><div class="timer" id="timer">00:30</div><span>de internet temporária para concluir o pagamento</span></div>
+
+        <div class="qr-placeholder" id="qrPlaceholder">
+          <img id="qrImage" class="qr-image hidden" alt="QR Code PIX" />
+          <div id="mockQr" class="mock-qr hidden"><strong>PIX TESTE</strong><span>Modo sem cobrança real</span></div>
+        </div>
+
+        <small id="pixValidity" class="pix-validity">O PIX continua válido mesmo depois dos 30 segundos.</small>
+        <button class="primary" id="copyPix">Copiar PIX Copia e Cola</button>
+        <button class="secondary" id="openBankPicker">Copiar PIX e escolher banco</button>
+        <div id="bankHint" class="bank-hint hidden">PIX copiado ✓ No aplicativo do banco, abra <strong>Pix → Copia e Cola</strong> e cole o código.</div>
+        <a class="text-link hidden" id="ticketUrl" target="_blank" rel="noopener">Ver instruções do Mercado Pago</a>
+        <button class="secondary hidden" id="simulatePaid">Simular pagamento aprovado</button>
+
+        <div class="attempts"><span>Tentativa</span><strong id="attemptCounter">1 de 3</strong></div>
+        <p class="payment-status" id="paymentStatus">Aguardando pagamento...</p>
+
+        <div class="status-box hidden" id="expiredBox">
+          <strong id="expiredTitle">Os 30 segundos de internet temporária terminaram.</strong>
+          <span id="expiredText">O QR PIX continua válido e ainda pode ser pago.</span>
+          <button class="primary" id="retryPayment">Abrir nova janela de 30 s</button>
+        </div>
+      </div>
+
+      <div class="bank-sheet hidden" id="bankSheet" role="dialog" aria-modal="true" aria-labelledby="bankSheetTitle">
+        <button class="bank-sheet-backdrop" id="bankSheetBackdrop" aria-label="Fechar"></button>
+        <div class="bank-sheet-card">
+          <div class="bank-sheet-head"><div><span class="eyebrow">PIX COPIA E COLA</span><h2 id="bankSheetTitle">Escolha seu banco</h2></div><button class="bank-close" id="bankClose" aria-label="Fechar">×</button></div>
+          <p class="bank-sheet-copy">Primeiro copiamos o PIX. No Android, os atalhos abaixo tentam abrir o app instalado. Se não abrir, basta abrir seu banco normalmente e ir em <strong>Pix → Copia e Cola</strong>.</p>
+          <div class="bank-grid">
+            <button class="bank-option" data-bank-package="com.nu.production" data-bank-name="Nubank"><strong>Nu</strong><span>Nubank</span></button>
+            <button class="bank-option" data-bank-package="com.mercadopago.wallet" data-bank-name="Mercado Pago"><strong>MP</strong><span>Mercado Pago</span></button>
+            <button class="bank-option" data-bank-package="com.picpay" data-bank-name="PicPay"><strong>PP</strong><span>PicPay</span></button>
+            <button class="bank-option" data-bank-package="" data-bank-name="Outro banco"><strong>+</strong><span>Outro banco</span></button>
+          </div>
+          <small class="bank-warning">O navegador não consegue garantir a abertura direta da tela Pix de todos os bancos. O código continua copiado e o Open Wi‑Fi segue aguardando a confirmação.</small>
+        </div>
+      </div>
+
+      <div class="status-box error-box hidden" id="paymentError">
+        <strong>Não foi possível gerar o PIX.</strong>
+        <span id="paymentErrorText">Tente novamente.</span>
+        <a class="primary link-button" href="index.html">Voltar</a>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

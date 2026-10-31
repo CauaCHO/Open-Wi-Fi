@@ -1,0 +1,2 @@
+Open Wi-Fi v0.9.4
+Fluxo fechado + grupos imutáveis + acompanhamento web por token

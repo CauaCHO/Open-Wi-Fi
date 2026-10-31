@@ -1,0 +1,22 @@
+OPEN WI-FI v1.3 — ROUTERBOARD
+
+Procedimento normal para uma RB nova:
+
+Painel → Routerboards → Adicionar Routerboard → escolher modo → Gerar script.
+
+O bootstrap gerado vem encapsulado em um único bloco `{ ... }`, para ser colado de uma só vez no Terminal RouterOS. Ele contém apenas um token de adoção temporário e de uso único.
+
+Depois do enrollment a RB:
+- recebe uma credencial individual;
+- salva em `openwifi-router.token`;
+- baixa o instalador atual;
+- instala/troca o agente;
+- configura o scheduler de 10 s;
+- aparece no painel.
+
+Para uma RB já adotada:
+- abra o card da Routerboard no painel;
+- edite o Perfil gerenciado;
+- use `Copiar script de reparo` para baixar e reaplicar o instalador atual sem exibir a credencial.
+
+O arquivo `openwifi-cloud-agent-v1.3.rsc` é somente referência técnica. Não contém a credencial de uma RB real.

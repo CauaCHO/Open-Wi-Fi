@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f"><title>Open Wi-Fi • Dashboard</title><link rel="icon" type="image/png" href="/newlogo.png"><link rel="apple-touch-icon" href="/newlogo.png"><link rel="stylesheet" href="/admin.css"></head>
+<body>
+  <header class="admin-header"><div class="header-inner"><div class="brand"><img class="brand-logo small" src="/newlogo.png" alt="Open Wi‑Fi"><div><strong>Open Wi‑Fi</strong><span>Monitoramento local</span></div></div><div class="header-actions"><span id="modeStatus" class="status-chip">Modo…</span><span id="routerStatus" class="status-chip">RB…</span><button id="refreshBtn" class="ghost">Atualizar</button><button id="logoutBtn" class="ghost">Sair</button></div></div></header>
+  <main class="admin-main">
+    <section class="hero card"><div><span class="eyebrow">OPEN WI‑FI • LOCAL</span><h1>Visão geral</h1><p id="updatedAt" class="muted">Carregando…</p></div></section>
+
+    <section class="panel card party-control">
+      <div class="panel-head"><div><span class="eyebrow">OPERAÇÃO</span><h2>Modo do Open Wi‑Fi</h2><p class="muted">Troque entre os planos clássicos e os planos para festas.</p></div></div>
+      <div class="control-body">
+        <div class="mode-switch"><button id="standardMode" class="mode-btn">Padrão</button><button id="partyMode" class="mode-btn">Party 🪩</button></div>
+        <div id="eventFields" class="event-fields hidden">
+          <label>Nome do evento<input id="eventName" placeholder="New House • Sextou"></label>
+          <label>Início<input id="eventStart" type="datetime-local"></label>
+          <label>Fim<input id="eventEnd" type="datetime-local"></label>
+        </div>
+        <button id="saveMode" class="primary-action">Salvar modo</button><span id="modeMessage" class="muted"></span>
+      </div>
+    </section>
+
+    <section id="metrics" class="metrics-grid"></section>
+
+    <section id="combosPanel" class="panel card hidden"><div class="panel-head"><div><span class="eyebrow">PARTY</span><h2>Combos do evento</h2><p class="muted">Códigos únicos, ocupação e envio por WhatsApp.</p></div></div><div class="table-wrap"><table><thead><tr><th>Código</th><th>Plano</th><th>Vagas</th><th>Validade</th><th>WhatsApp</th><th>Ação</th></tr></thead><tbody id="combosBody"></tbody></table></div></section>
+
+    <section class="panel card"><div class="panel-head"><div><span class="eyebrow">REDE</span><h2>Dispositivos</h2><p class="muted">Um aparelho pode possuir mais de um MAC vinculado ao mesmo Device ID.</p></div><input id="clientSearch" class="search" placeholder="Buscar aparelho, MAC, IP ou e-mail"></div><div class="table-wrap"><table><thead><tr><th>Status</th><th>Aparelho</th><th>Rede / identificação</th><th>E-mail</th><th>Plano</th><th>Validade</th></tr></thead><tbody id="clientsBody"></tbody></table></div></section>
+    <section class="panel card"><div class="panel-head"><div><span class="eyebrow">FINANCEIRO</span><h2>Últimas compras</h2><p class="muted">Pagamentos aprovados registrados pelo Open Wi‑Fi.</p></div></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Aparelho</th><th>E-mail</th><th>Plano</th><th>Valor</th><th>Acesso até</th></tr></thead><tbody id="purchasesBody"></tbody></table></div></section>
+    <footer>Open Wi‑Fi v0.9.2 • Padrão + Party Mode</footer>
+  </main><script src="/admin.js"></script>
+</body></html>

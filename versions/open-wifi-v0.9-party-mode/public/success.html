@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Internet liberada • Open Wi‑Fi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="success">
+  <main class="shell compact">
+    <section class="card center-card">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow" id="successEyebrow">PAGAMENTO CONFIRMADO</span>
+      <h1 id="successTitle">Pagamento aprovado!</h1>
+      <p id="successLead">O Open Wi‑Fi registrou a autorização para este dispositivo.</p>
+      <div class="access-info">
+        <div><span>Plano</span><strong id="successPlan">—</strong></div>
+        <div><span>Validade</span><strong id="successValidity">—</strong></div>
+      </div>
+
+      <section id="comboSuccess" class="combo-success hidden">
+        <span class="eyebrow">SEU CONVITE PARTY</span>
+        <h2>Compartilhe com seus amigos</h2>
+        <div class="combo-code" id="comboCode">—</div>
+        <img id="comboQr" class="invite-qr" alt="QR de convite do combo" />
+        <div class="combo-capacity"><span id="comboUsed">1</span> de <span id="comboMax">4</span> aparelhos vinculados</div>
+        <div class="party-actions">
+          <button id="copyCombo" class="secondary">Copiar código</button>
+          <a id="shareWhatsapp" class="primary link-button" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+        </div>
+        <small id="whatsappNote">O convite também fica salvo no servidor e pode ser reenviado pelo painel.</small>
+      </section>
+
+      <button class="primary" id="continueInternet">Continuar</button>
+      <small id="routerNote">Confirmando a liberação deste dispositivo na rede...</small>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

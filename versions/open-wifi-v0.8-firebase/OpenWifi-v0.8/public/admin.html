@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Wi-Fi • Dashboard</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <div><span class="brand-mark small">⌁</span><strong>Open Wi-Fi</strong><span class="header-sub">Monitoramento</span></div>
+    <div class="header-actions"><span id="routerStatus" class="status-chip">RB…</span><button id="refreshBtn" class="ghost">Atualizar</button><button id="logoutBtn" class="ghost">Sair</button></div>
+  </header>
+  <main class="admin-main">
+    <section class="hero"><div><h1>Visão geral</h1><p id="updatedAt" class="muted">Carregando…</p></div></section>
+    <section id="metrics" class="metrics-grid"></section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Dispositivos</h2><p class="muted">Conectados, acessos pagos e identificação pelo DHCP.</p></div><input id="clientSearch" class="search" placeholder="Buscar aparelho, MAC, IP ou e-mail"></div>
+      <div class="table-wrap"><table><thead><tr><th>Status</th><th>Aparelho</th><th>IP / MAC</th><th>E-mail</th><th>Plano</th><th>Validade</th></tr></thead><tbody id="clientsBody"></tbody></table></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Últimas compras</h2><p class="muted">Pagamentos aprovados registrados pelo Open Wi-Fi.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Data</th><th>Aparelho</th><th>E-mail</th><th>Plano</th><th>Valor</th><th>Acesso até</th></tr></thead><tbody id="purchasesBody"></tbody></table></div>
+    </section>
+  </main>
+  <script src="/admin.js"></script>
+</body></html>

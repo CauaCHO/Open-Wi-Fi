@@ -1,0 +1,25 @@
+OPEN WI-FI v1.2 — MIKROTIK
+
+NÃO é mais necessário copiar manualmente um token permanente para o script.
+
+Use:
+
+Admin
+→ MikroTik / Instalação
+→ Adicionar MikroTik
+→ escolher modo
+→ Gerar script
+→ Copiar script
+→ colar no Terminal RouterOS
+
+O bootstrap possui um token temporário de uso único.
+
+Depois do enrollment:
+- a RB recebe uma credencial individual;
+- salva em openwifi-router.token;
+- baixa o instalador;
+- baixa o agente;
+- cria/atualiza openwifi-cloud-poll;
+- cria scheduler de 10 segundos.
+
+O arquivo openwifi-cloud-agent-phase4.rsc é apenas referência técnica.

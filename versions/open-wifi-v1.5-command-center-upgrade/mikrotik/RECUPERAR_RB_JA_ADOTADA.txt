@@ -1,0 +1,34 @@
+OPEN WI-FI v1.3 — RECUPERAR RB JÁ ADOTADA
+
+Use somente DEPOIS de fazer deploy do hotfix.
+
+A RB já possui `openwifi-router.token` válido, portanto NÃO gere outro enrollment.
+
+1) No Terminal RouterOS, cole este bloco inteiro:
+
+{
+:local baseUrl "https://openwifi-api.cauaholiveira06.workers.dev";
+:local tokenFile [/file find where name="openwifi-router.token"];
+:if ([:len $tokenFile] = 0) do={ :error "openwifi_token_missing" };
+:local token [/file get $tokenFile contents];
+:foreach f in=[/file find where name="openwifi-installer.rsc"] do={ /file remove $f };
+/tool fetch url=($baseUrl . "/api/router/installer.rsc") http-method=get http-header-field=("Authorization: Bearer " . $token) dst-path="openwifi-installer.rsc";
+:put "OpenWiFi: novo instalador baixado";
+}
+
+2) Valide sem alterar nada:
+
+/import file-name="openwifi-installer.rsc" verbose=yes dry-run
+
+O esperado é terminar sem "Script Error".
+
+3) Somente se o dry-run estiver limpo:
+
+/import file-name="openwifi-installer.rsc"
+
+4) Verifique:
+
+/file print where name="openwifi-agent.txt"
+/system scheduler print where name="openwifi-cloud-poll"
+
+Não abra nem compartilhe o conteúdo de `openwifi-router.token`.

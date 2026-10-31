@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>Open Wi‑Fi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <main class="shell">
+    <section class="hero card">
+      <div class="brand" aria-label="Open Wi-Fi">
+        <div class="brand-mark">⌁</div>
+        <div><strong>Open Wi‑Fi</strong><span>Internet rápida, pagamento no PIX.</span></div>
+      </div>
+
+      <div class="hero-copy">
+        <span class="eyebrow">CONECTADO AO PORTAL</span>
+        <h1>Escolha seu acesso</h1>
+        <p>Selecione um plano, pague via PIX e o acesso é liberado para este dispositivo.</p>
+      </div>
+
+      <label class="field-label" for="payerEmail">Seu e-mail</label>
+      <input class="text-input" id="payerEmail" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" />
+      <small class="field-help">O Mercado Pago exige o e-mail do pagador para criar a cobrança PIX.</small>
+
+      <div class="plans" id="plans">
+        <button class="plan" data-plan="1h"><span class="plan-time">1 hora</span><span class="plan-price">R$ 2</span><span class="plan-note">Acesso rápido</span></button>
+        <button class="plan" data-plan="1d"><span class="plan-time">1 dia</span><span class="plan-price">R$ 5</span><span class="plan-note">Até 24 horas</span></button>
+        <button class="plan" data-plan="7d"><span class="plan-time">1 semana</span><span class="plan-price">R$ 10</span><span class="plan-note">7 dias de acesso</span></button>
+        <button class="plan featured" data-plan="30d"><span class="badge">MELHOR CUSTO</span><span class="plan-time">30 dias</span><span class="plan-price">R$ 25</span><span class="plan-note">Menos de R$ 1 por dia</span></button>
+      </div>
+
+      <p class="form-error hidden" id="homeError"></p>
+
+      <div class="notice"><strong>30 segundos por tentativa</strong><span>Você pode gerar até 3 cobranças. Se as três expirarem, novas tentativas ficam bloqueadas por 10 minutos.</span></div>
+    </section>
+    <footer>Open Wi‑Fi • acesso individual vinculado ao dispositivo</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
