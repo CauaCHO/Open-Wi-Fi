@@ -36,4 +36,4 @@ c8f9ba356e4111848c570dccbd3fdcefbf771104aa967ea7804f6f083984bd86  open-wifi-v1.2
 0e48ffdcf9922f76ddd0076ada7b8e15af652f66a21912d42111db77fb7599d5  open-wifi-v1.6.5-router-retirement.zip
 8cf0111f0e2dcd0f1863a3ef4817e9a5f6dc0159e69b684fa4136f91d50d11c9  open-wifi-v1.6.6-router-heartbeat.zip
 643f5f321a2da3be4831e0a44bd6ffe2a8f04ba580805c228b0ae79ab90b6b09  open-wifi-v1.6.7-router-installer-safety.zip
-f5267288773551ac241062f1482b79e7c83e38986b4a4a14d743b39e758117c5  open-wifi-v1.6.8-connections-themes-team.zip
+0ba5ba702dbf123de2c8bcd92ae922633ce1ee4cdea6df3450d17cfb58b3d397  open-wifi-v1.6.8-connections-themes-team.zip

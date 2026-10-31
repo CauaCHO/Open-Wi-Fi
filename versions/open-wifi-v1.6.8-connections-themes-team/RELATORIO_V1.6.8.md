@@ -24,5 +24,6 @@
 ## Testes e limites
 
 - Validação local do Worker, scripts embutidos do painel e portal, contratos de autorização e migrações em SQLite.
-- O teste local não comprova pagamentos, webhooks, nem o funcionamento da RB em produção.
-- A área Conexões só aceitará alterações depois de configurar o novo segredo fixo. Sem isso, as credenciais atuais do Cloudflare seguem em uso.
+- Produção verificada em 31/10/2026: `/health` retornou v1.6.8 com Mercado Pago e webhook configurados; painel e portal responderam HTTP 200; todos os 21 bindings, inclusive o novo segredo, foram mantidos; a tabela e o registro da migração `0013` existem no D1. Nenhuma credencial foi alterada na página Conexões.
+- A “MicroTik Again” estava habilitada, com status online e contato recente no D1 após a publicação.
+- Estes checks não comprovam uma compra real, a entrega de webhook ou um novo teste físico da RB.
