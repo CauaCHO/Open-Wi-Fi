@@ -1514,9 +1514,12 @@ function adminSpeedDownload(){
 async function adminSpeedUpload(request){
   const length=Number(request.headers.get("content-length")||0);
   if(!Number.isFinite(length)||length>512*1024)return json({ok:false,error:"speed_upload_too_large"},413);
-  const body=await request.arrayBuffer();
-  if(body.byteLength>512*1024)return json({ok:false,error:"speed_upload_too_large"},413);
-  return json({ok:true,bytes:body.byteLength});
+  let bytes=0;
+  if(request.body){
+    const reader=request.body.getReader();
+    while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.byteLength;if(bytes>512*1024){await reader.cancel();return json({ok:false,error:"speed_upload_too_large"},413)}}
+  }
+  return json({ok:true,bytes});
 }
 
 async function adminCreateRouterEnrollment(request,env) {
